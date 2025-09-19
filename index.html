@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atividade 6</title>
+    <link rel="stylesheet" href="form1.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+</head>
+<body>
+    <h2>Cadastro do Candidato</h2>
+    <form action="https://formspree.io/f/mpwjvrep" method="post">
+       <fieldset>
+        <legend>Informações Pessoais </legend>
+    <label for="nome">Nome</label>
+    <input type="text" name="nome" id="nome" size="30" value="" maxlength="5" placeholder="Digite seu nome completo">
+<div>
+    <label  class="l4" for="">
+       Idade <input type="number">
+    </label>
+</div> 
+<div>
+    <label class="l3" for="sexo"><source>Sexo
+        <p></p>
+    <input type="radio" name="sexo" 
+    id="sexo">Feminino
+     <input type="radio" name="sexo" id="sexo">Masculino
+     <input type="radio" name="sexo" id="sexo">Prefiro ñ dizer
+</label>
+</div>  
+<div>
+    <label for="">
+        CPF <input type="text" id="cpf" name="cpf" placeholder="Digite seu CPF">
+    </label>
+</div>
+<div>
+    <label class="l2" for="Estado Civil "><source>Estado Civil
+        <p></p> 
+    <input type="radio" name="Estado Civil " id="Estado Civil ">Solteiro
+     <input type="radio" name="Estado Civil " id="Estado Civil ">Casado
+     <input type="radio" name="Estado Civil " id="Estado Civil ">Viúvo
+     <input type="radio" name="Estado Civil " id="Estado Civil ">Divorciado
+</label>
+       </fieldset>
+       <fieldset>
+        <legend>Informações de Contato</legend>
+        <div>
+            <label for="Rua">
+        Rua <input type="text" size="30" id="Rua" name="Rua" >
+    </label>
+        </div>
+        <div>
+            <label for="Complemento">
+        Complemento <input type="text" id="Complemento" name="Complemento">
+    </label>
+        </div>
+        <div>
+            <label for="Bairro">
+        Bairro <input type="text" id="Bairro" name="Bairro">
+    </label>
+        </div>
+        
+    <div>
+    <label for="">
+    Nº<input type="number">
+    </label>
+</div> 
+<div><label for="">
+        CEP <input type="text" id="CEP" name="CEP" placeholder="Digite seu CEP">
+    </label>
+</div>
+<div>
+    <label class="l4" for="uf">Uf
+        <select name="sp" id="">
+            <option value="sp">SP</option>
+            <option value="AC">AC</option>
+            <option value="AL">AL</option>
+            <option value="AM">AM</option>
+            <option value="AP">AP</option>
+            <option value="BA">BA</option>
+            <option value="CE">CE</option>
+            <option value="DF">DF</option>
+            <option value="ES">ES</option>
+            <option value="GO">GO</option>
+            <option value="MA">MA</option>
+            <option value="MG">MG</option>
+            <option value="MS">MS</option>
+            <option value="MT">MT</option>
+            <option value="PA">PA</option>
+            <option value="PB">PB</option>
+            <option value="PE">PE</option>
+            <option value="PI">PI</option>
+            <option value="PR">PR</option>
+            <option value="RJ">RJ</option>
+            <option value="RN">RN</option>
+            <option value="RO">RO</option>
+            <option value="RR">RR</option>
+            <option value="RS">RS</option>
+            <option value="SC">SC</option>
+            <option value="SE">SE</option>
+            <option value="TO">TO</option>
+        
+        </select>
+        <div><label for="">
+        Celular <input type="text" id="Celular" name="Celular" placeholder="Digite seu Celular" >
+    </label>
+</div>
+ <div>
+            <label for="Email">
+    E-mail <input type="text" id="E-mail" name="E-mail">
+    </label>
+        </div>
+        <div>
+    <label for="text">Comentários</label>
+    <textarea name="" id="" cols="20" rows="1" style="resize: none;"></textarea>
+</div>
+       </fieldset>
+       
+<button type="reset">Limpar</button>
+<button type="submit">Enviar</button>
+    
+    </form>
+     <script>
+        $(document).ready(function(){
+            $('#cpf').mask('000.000.000-00', {reverse: true});
+            $('#CEP').mask('00000-000');
+            $('#Celular').mask('(00) 00000-0000');
+        });
+    </script>
+</html>
